@@ -7,7 +7,33 @@
     <title>The COLOR Palette: By ChatGPT</title>
 </head>
 <body>
-    <h1 style="color:red">SUP DUDE!</h1>
+    <h1>SUP DUDE!</h1>
+
+    <form id="form">
+        <input type="text" name="query">
+        <button>Sumbit</button>        
+    </form>
     
+    <script>
+        const form = document.querySelector("#form");
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            query = form.elements.query.value;
+            fetch("/palette", {
+                method: "POST",
+                headers:{
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams({
+                    query: query
+                })
+            })
+            .then((response) => response.json())
+            .then(data =>{
+                console.log(data)
+            })
+        })
+        
+    </script>
 </body>
 </html>
