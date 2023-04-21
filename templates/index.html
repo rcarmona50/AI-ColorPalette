@@ -5,35 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The COLOR Palette: By ChatGPT</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+    </style>
 </head>
-<body>
-    <h1>SUP DUDE!</h1>
+<body style="font-family: 'Roboto Condensed';">
+     <div class="container"></div>
 
     <form id="form">
+        <h1>Type a prompt. <br>OpenAI will choose a color palette for you.</h1>
+        <h3>If it's not right. Blame AI.</h3>
+        <h3>By the way. Click the color to copy it.</h3>
         <input type="text" name="query">
-        <button>Sumbit</button>        
+        <button class="btn" style="font-family: 'Roboto Condensed';">Sumbit</button>        
     </form>
     
-    <script>
-        const form = document.querySelector("#form");
-        form.addEventListener("submit", function(e){
-            e.preventDefault();
-            query = form.elements.query.value;
-            fetch("/palette", {
-                method: "POST",
-                headers:{
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                body: new URLSearchParams({
-                    query: query
-                })
-            })
-            .then((response) => response.json())
-            .then(data =>{
-                console.log(data)
-            })
-        })
-        
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
