@@ -18,11 +18,11 @@ def get_colors(msg):
     Your should generate color palettes that fit the theme, mood, or instructions in the prompt.
     The palettes should be between 2 and 8 colors.
 
-    Q: Convert the following verbal description of a color palette into a list of colors: The Mediterranean Sea
-    A: ["#006699", "#66CCCC", "#F0E68C", "#008000", "#F08080"]
+    # Q: Convert the following verbal description of a color palette into a list of colors: The Mediterranean Sea
+    # A: ["#006699", "#66CCCC", "#F0E68C", "#008000", "#F08080"]
 
-    Q: Convert the following verbal description of a color palette into a list of colors: sage, nature, earth
-    A: ["#EDF1D6", "#9DC08B", "#609966", "#40513B"]
+    # Q: Convert the following verbal description of a color palette into a list of colors: sage, nature, earth
+    # A: ["#EDF1D6", "#9DC08B", "#609966", "#40513B"]
 
 
     Desired Format: a JSON array of hexadecimal color codes
@@ -35,6 +35,8 @@ def get_colors(msg):
         prompt=prompt,
         model="text-davinci-003",
         max_tokens=200,
+        temperature = 0,
+        top_p = 0
     )
 
     colors = json.loads(response["choices"][0]["text"])
