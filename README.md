@@ -1,4 +1,4 @@
-<h1>OpenAI Color Palette Generator</h1>
+<h1>AI Color Palette Generator</h1>
 
 Project Description:
 
