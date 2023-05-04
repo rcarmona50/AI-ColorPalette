@@ -4,7 +4,7 @@ Project Description:
 
 The AI-Powered Color Palette Generator is an innovative web application that utilizes the Flask framework and OpenAI API to create aesthetically appealing color palettes based on user-generated prompts. The project aims to simplify the design process for creatives by providing a seamless and intuitive interface for generating color schemes.
 
-<h4>Key Features</h4>:
+<h4>Key Features</h4>
 
 OpenAI API Integration: The application leverages the powerful OpenAI API to analyze user input and generate relevant color palettes. The AI model processes the prompts and returns a set of colors that match the desired mood, theme, or concept.
 
